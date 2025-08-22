@@ -1,0 +1,32 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  
+  // Padding variants
+  &.card-sm {
+    padding: 16px;
+  }
+  
+  &.card-md {
+    padding: 24px;
+  }
+  
+  &.card-lg {
+    padding: 32px;
+  }
+  
+  // Shadow variants
+  &.card-sm {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  &.card-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  &.card-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+}

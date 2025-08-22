@@ -1,0 +1,82 @@
+.action-buttons-row {
+  background: white;
+  padding: 16px 30px;
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  justify-content: center;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-icon {
+    font-size: 1rem;
+  }
+  
+  .btn-text {
+    font-weight: 600;
+  }
+  
+  &.status-btn {
+    &.in-progress {
+      background: #fef3c7;
+      color: #d97706;
+      border: 1px solid #f59e0b;
+      
+      &:hover {
+        background: #fde68a;
+        border-color: #d97706;
+      }
+    }
+    
+    &.plugging {
+      background: #dbeafe;
+      color: #2563eb;
+      border: 1px solid #3b82f6;
+      
+      &:hover {
+        background: #bfdbfe;
+        border-color: #2563eb;
+      }
+    }
+    
+    &.red-flag {
+      background: #fee2e2;
+      color: #dc2626;
+      border: 1px solid #ef4444;
+      
+      &:hover {
+        background: #fecaca;
+        border-color: #dc2626;
+      }
+    }
+  }
+  
+  &.due-date-btn {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    
+    &:hover {
+      background: #e5e7eb;
+      border-color: #9ca3af;
+    }
+  }
+}

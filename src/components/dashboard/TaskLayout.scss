@@ -1,0 +1,444 @@
+// Task Management Layout
+.task-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 350px;
+  gap: 24px;
+  height: calc(100vh - 200px);
+}
+
+// Task Details Panel (Left)
+.task-details-panel {
+  overflow-y: auto;
+}
+
+// Task Main Content (Center)
+.task-main-content {
+  overflow: hidden;
+}
+
+// Task Activity Panel (Right)
+.task-activity-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+// Detail Section Styles
+.detail-section {
+  margin-bottom: 24px;
+  
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+  }
+  
+  .description {
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    
+    .tag {
+      background: #f3f4f6;
+      color: #374151;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+}
+
+// User Management Styles
+.assigned-users, .observers {
+  margin-bottom: 16px;
+  
+  .user {
+    display: block;
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .user-avatars {
+    display: flex;
+    gap: 8px;
+    
+    .avatar {
+      width: 32px;
+      height: 32px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+    }
+    
+    span {
+      color: #374151;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Relations Styles
+.relations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  .relation-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background: #f9fafb;
+    border-radius: 8px;
+    
+    .relation-icon {
+      font-size: 1.2rem;
+    }
+    
+    span {
+      color: #374151;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Insights Styles
+.insights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  .insight-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f9fafb;
+    border-radius: 8px;
+    
+    .insight-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    
+    .insight-value {
+      color: #374151;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Content Tabs
+.content-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+  
+  .tab {
+    padding: 12px 24px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    color: #6b7280;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      color: #374151;
+    }
+    
+    &.active {
+      color: #3b82f6;
+      border-bottom-color: #3b82f6;
+      background: white;
+    }
+  }
+}
+
+.tab-content {
+  padding: 24px;
+  overflow-y: auto;
+  height: calc(100% - 60px);
+}
+
+// Location & Maps
+.location-info {
+  margin-bottom: 20px;
+  
+  p {
+    margin: 0 0 4px 0;
+    color: #374151;
+    
+    strong {
+      color: #111827;
+    }
+  }
+}
+
+.maps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  .map-item {
+    h4 {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin: 0 0 12px 0;
+      font-weight: 500;
+    }
+    
+    .map-placeholder {
+      border: 2px dashed #d1d5db;
+      border-radius: 8px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9fafb;
+      
+      .map-content {
+        text-align: center;
+        color: #6b7280;
+        
+        .floor-plan, .street-map {
+          font-size: 0.9rem;
+          margin-bottom: 8px;
+        }
+        
+        .location-pin {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Assets & Attachments
+.attachments {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  h4 {
+    font-size: 1rem;
+    color: #374151;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+  }
+  
+  .attachment-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f9fafb;
+    border-radius: 8px;
+    
+    .attachment-icon {
+      font-size: 1.5rem;
+    }
+    
+    .attachment-info {
+      display: flex;
+      flex-direction: column;
+      
+      .attachment-name {
+        color: #374151;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      
+      .attachment-size {
+        color: #6b7280;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// Activity Panel Styles
+.activity-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  
+  .tab {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background: white;
+    margin-right: 2px;
+    
+    &:hover {
+      color: #374151;
+      background: #f9fafb;
+    }
+    
+    &.active {
+      color: #3b82f6;
+      border-bottom-color: #3b82f6;
+      background: white;
+      font-weight: 600;
+    }
+  }
+}
+
+.activity-feed {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f3f4f6;
+}
+
+.activity-date {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: 600;
+  margin: 20px 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.activity-item {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+  
+  .activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    
+    .activity-user {
+      color: #3b82f6;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .activity-time {
+      color: #9ca3af;
+      font-size: 0.8rem;
+    }
+  }
+  
+  .activity-content {
+    p {
+      margin: 0 0 8px 0;
+      color: #374151;
+      font-size: 0.9rem;
+    }
+    
+    .comment {
+      background: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border-left: 3px solid #3b82f6;
+      color: #4b5563;
+      font-style: italic;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.add-comment {
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  
+  .comment-input-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    
+    .comment-input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      
+      &::placeholder {
+        color: #9ca3af;
+      }
+    }
+    
+    .attachment-btn {
+      background: white;
+      border: 1px solid #d1d5db;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      
+      &:hover {
+        background: #f3f4f6;
+      }
+    }
+  }
+}
+
+// Responsive Design for Task Layout
+@media (max-width: 1200px) {
+  .task-layout {
+    grid-template-columns: 280px 1fr 320px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .task-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+  }
+  
+  .task-details-panel,
+  .task-main-content,
+  .task-activity-panel {
+    height: auto;
+  }
+}

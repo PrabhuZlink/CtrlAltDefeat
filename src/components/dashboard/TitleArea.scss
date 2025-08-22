@@ -1,0 +1,58 @@
+.title-area {
+  background: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+  .title-left {
+    .task-header {
+      .task-id {
+        font-size: 0.9rem;
+        color: #6b7280;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      
+      .page-title {
+        margin: 0;
+        color: #1a202c;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      
+      .task-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+        
+        .status {
+          display: inline-block;
+          padding: 4px 12px;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          
+          &.in-progress {
+            background: #fef3c7;
+            color: #d97706;
+          }
+        }
+        
+        .due-date, .requested-by {
+          font-size: 0.9rem;
+          color: #6b7280;
+        }
+      }
+    }
+  }
+  
+  .title-right {
+    display: flex;
+    gap: 12px;
+  }
+}
